@@ -1,0 +1,9 @@
+decltype_auto.cpp
+decltype_auto.cpp(14) : error C2062: type 'auto' unexpected
+decltype_auto.cpp(14) : error C3553: decltype expects an expression not a type
+decltype_auto.cpp(14) : error C2143: syntax error : missing ';' before ')'
+decltype_auto.cpp(14) : error C2059: syntax error : ')'
+decltype_auto.cpp(15) : error C2062: type 'auto' unexpected
+decltype_auto.cpp(15) : error C3553: decltype expects an expression not a type
+decltype_auto.cpp(15) : error C2143: syntax error : missing ';' before ')'
+decltype_auto.cpp(15) : error C2059: syntax error : ')'

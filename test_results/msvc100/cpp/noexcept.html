@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/noexcept</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+</code><code class="cpp">/*
+The noexcept specifier is supported.
+
+Reference:
+    [N3050](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2010/n3050.html)
+
+Check with:
+    #if !__has_feature(cxx_noexcept)
+*/
+
+void f() noexcept;
+void g() noexcept(false);
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.40219.01 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">noexcept.cpp
+noexcept.cpp(11) : error C3646: &#39;noexcept&#39; : unknown override specifier
+noexcept.cpp(12) : error C3646: &#39;noexcept&#39; : unknown override specifier
+noexcept.cpp(12) : error C2072: &#39;g&#39; : initialization of a function
+noexcept.cpp(12) : error C2440: &#39;initializing&#39; : cannot convert from &#39;bool&#39; to &#39;void (void)&#39;
+        There are no conversions to function types, although there are conversions to references or pointers to functions
+</pre>
+</body>
+</html>

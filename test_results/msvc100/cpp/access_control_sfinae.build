@@ -1,0 +1,4 @@
+access_control_sfinae.cpp
+access_control_sfinae.cpp(33) : error C2248: 'X::X' : cannot access private member declared in class 'X'
+        access_control_sfinae.cpp(15) : see declaration of 'X::X'
+        access_control_sfinae.cpp(14) : see declaration of 'X'

@@ -1,0 +1,7 @@
+unicode_literals.cpp
+unicode_literals.cpp(12) : error C2143: syntax error : missing ';' before 'string'
+unicode_literals.cpp(12) : error C2059: syntax error : 'string'
+unicode_literals.cpp(13) : error C2143: syntax error : missing ';' before 'string'
+unicode_literals.cpp(13) : error C2059: syntax error : 'string'
+unicode_literals.cpp(14) : error C2143: syntax error : missing ';' before 'string'
+unicode_literals.cpp(14) : error C2059: syntax error : 'string'

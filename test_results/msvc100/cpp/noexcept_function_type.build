@@ -1,0 +1,11 @@
+noexcept_function_type.cpp
+noexcept_function_type.cpp(15) : error C3646: 'noexcept' : unknown override specifier
+noexcept_function_type.cpp(20) : error C2039: 'type' : is not a member of 'std::tr1::enable_if<_Test,_Type>'
+        with
+        [
+            _Test=false,
+            _Type=int
+        ]
+noexcept_function_type.cpp(20) : error C2146: syntax error : missing ';' before identifier 'i'
+noexcept_function_type.cpp(20) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+noexcept_function_type.cpp(20) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int

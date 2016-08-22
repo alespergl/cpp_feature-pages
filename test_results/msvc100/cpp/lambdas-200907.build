@@ -1,0 +1,10 @@
+lambdas-200907.cpp
+lambdas-200907.cpp(31) : error C2248: 'non_capturable::non_capturable' : cannot access private member declared in class 'non_capturable'
+        lambdas-200907.cpp(14) : see declaration of 'non_capturable::non_capturable'
+        lambdas-200907.cpp(12) : see declaration of 'non_capturable'
+lambdas-200907.cpp(31) : error C2248: 'non_capturable::non_capturable' : cannot access private member declared in class 'non_capturable'
+        lambdas-200907.cpp(14) : see declaration of 'non_capturable::non_capturable'
+        lambdas-200907.cpp(12) : see declaration of 'non_capturable'
+lambdas-200907.cpp(30) : error C2248: 'non_capturable::non_capturable' : cannot access private member declared in class 'non_capturable'
+        lambdas-200907.cpp(14) : see declaration of 'non_capturable::non_capturable'
+        lambdas-200907.cpp(12) : see declaration of 'non_capturable'

@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>C++ Feature Support</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>C++ Feature Support</h1>
+
+<p>This page presents the results of running the <b>cpp_feature</b> test suite on various C++ toolchains.</p>
+
+<p>You can drill into each test case by clicking on the respective cell in the grid. There you will see the source code of the test,
+compiler and linker output, and the output of the built program.</p>
+
+<p>Each test case is designed to test support of one C++ standard feature at a certain level. There is always a header comment which
+points to the relevant document describing the feature. Also every test case provides information on how to check for the feature
+in source code when using the <b>cpp_feature</b> library.</p>
+
+<p>Many of the test cases have parts based on examples from the standard or various online sources.</p>
+
+<hr>
+
+<table>
+<tr><th></th>
+    <th><div><span>Clang/Apple LLVM 7.3</span></div></th>
+    <th><div><span>Clang/C2 3.8</span></div></th>
+    <th><div><span>GCC 5.4</span></div></th>
+    <th><div><span>MSVC 10.0</span></div></th>
+    <th><div><span>MSVC 11.0</span></div></th>
+    <th><div><span>MSVC 12.0</span></div></th>
+    <th><div><span>MSVC 14.0</span></div></th>
+</tr>
+<tr><td>cpp/access_control_sfinae</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/access_control_sfinae.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/access_control_sfinae.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/access_control_sfinae.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/access_control_sfinae.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/access_control_sfinae.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/access_control_sfinae.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/access_control_sfinae.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/aggregate_nsdmi</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/aggregate_nsdmi.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/aggregate_nsdmi.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/aggregate_nsdmi.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/aggregate_nsdmi.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/aggregate_nsdmi.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/aggregate_nsdmi.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc140/cpp/aggregate_nsdmi.html">&#10005;</a></td>
+</tr>
+<tr><td>cpp/alias_templates</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/alias_templates.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/alias_templates.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/alias_templates.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/alias_templates.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/alias_templates.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/alias_templates.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/alias_templates.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/alignas</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/alignas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/alignas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/alignas.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/alignas.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/alignas.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/alignas.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/alignas.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/alignof</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/alignof.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/alignof.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/alignof.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/alignof.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/alignof.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/alignof.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/alignof.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/attributes</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/attributes.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/attributes.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/attributes.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/attributes.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/attributes.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/attributes.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/attributes.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/auto_type</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/auto_type.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/auto_type.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/auto_type.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc100/cpp/auto_type.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc110/cpp/auto_type.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/auto_type.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/auto_type.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/binary_literals</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/binary_literals.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/binary_literals.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/binary_literals.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/binary_literals.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/binary_literals.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/binary_literals.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/binary_literals.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/constexpr</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/constexpr.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/constexpr.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/constexpr.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/constexpr.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/constexpr.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/constexpr.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/constexpr.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/constexpr-201304</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/constexpr-201304.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/constexpr-201304.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/constexpr-201304.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/constexpr-201304.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/constexpr-201304.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/constexpr-201304.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc140/cpp/constexpr-201304.html">&#10005;</a></td>
+</tr>
+<tr><td>cpp/decltype</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/decltype.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/decltype.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/decltype.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc100/cpp/decltype.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc110/cpp/decltype.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/decltype.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/decltype.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/decltype_auto</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/decltype_auto.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/decltype_auto.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/decltype_auto.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/decltype_auto.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/decltype_auto.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/decltype_auto.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/decltype_auto.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/delegating_constructors</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/delegating_constructors.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/delegating_constructors.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/delegating_constructors.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/delegating_constructors.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/delegating_constructors.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/delegating_constructors.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/delegating_constructors.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/enumerator_attributes</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/enumerator_attributes.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/enumerator_attributes.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/gcc-5.4/cpp/enumerator_attributes.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/enumerator_attributes.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/enumerator_attributes.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/enumerator_attributes.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/enumerator_attributes.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/exceptions</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/exceptions.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/exceptions.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/exceptions.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc100/cpp/exceptions.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc110/cpp/exceptions.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/exceptions.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/exceptions.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/fold_expressions</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/fold_expressions.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/fold_expressions.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/gcc-5.4/cpp/fold_expressions.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/fold_expressions.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/fold_expressions.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/fold_expressions.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc140/cpp/fold_expressions.html">&#10005;</a></td>
+</tr>
+<tr><td>cpp/generic_lambdas</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/generic_lambdas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/generic_lambdas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/generic_lambdas.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/generic_lambdas.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/generic_lambdas.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/generic_lambdas.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/generic_lambdas.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/inheriting_constructors</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/inheriting_constructors.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/inheriting_constructors.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/inheriting_constructors.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/inheriting_constructors.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/inheriting_constructors.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/inheriting_constructors.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/inheriting_constructors.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/init_captures</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/init_captures.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/init_captures.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/init_captures.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/init_captures.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/init_captures.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/init_captures.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/init_captures.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/initializer_lists</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/initializer_lists.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/initializer_lists.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/initializer_lists.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/initializer_lists.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/initializer_lists.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/initializer_lists.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/initializer_lists.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/lambdas</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/lambdas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/lambdas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/lambdas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc100/cpp/lambdas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc110/cpp/lambdas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/lambdas.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/lambdas.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/lambdas-200907</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/lambdas-200907.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/lambdas-200907.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/lambdas-200907.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/lambdas-200907.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/lambdas-200907.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/lambdas-200907.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc140/cpp/lambdas-200907.html">&#10005;</a></td>
+</tr>
+<tr><td>cpp/namespace_attributes</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/namespace_attributes.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/namespace_attributes.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/gcc-5.4/cpp/namespace_attributes.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/namespace_attributes.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/namespace_attributes.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/namespace_attributes.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/namespace_attributes.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/nested_namespace_definitions</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/nested_namespace_definitions.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/nested_namespace_definitions.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/gcc-5.4/cpp/nested_namespace_definitions.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/nested_namespace_definitions.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/nested_namespace_definitions.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/nested_namespace_definitions.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/nested_namespace_definitions.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/noexcept</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/noexcept.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/noexcept.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/noexcept.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/noexcept.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/noexcept.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/noexcept.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/noexcept.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/noexcept_function_type</td>
+    <td class="result fail"><a href="./test_results/clang_apple-7.3/cpp/noexcept_function_type.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/clang_c2-3.8/cpp/noexcept_function_type.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/gcc-5.4/cpp/noexcept_function_type.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/noexcept_function_type.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/noexcept_function_type.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/noexcept_function_type.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc140/cpp/noexcept_function_type.html">&#10005;</a></td>
+</tr>
+<tr><td>cpp/nontype_template_args</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/nontype_template_args.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/nontype_template_args.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/gcc-5.4/cpp/nontype_template_args.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc100/cpp/nontype_template_args.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc110/cpp/nontype_template_args.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/nontype_template_args.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/nontype_template_args.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/nsdmi</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/nsdmi.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/nsdmi.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/nsdmi.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/nsdmi.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/nsdmi.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/nsdmi.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/nsdmi.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/range_based_for</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/range_based_for.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/range_based_for.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/range_based_for.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/range_based_for.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc110/cpp/range_based_for.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/range_based_for.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/range_based_for.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/raw_strings</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/raw_strings.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/raw_strings.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/raw_strings.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/raw_strings.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/raw_strings.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/raw_strings.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/raw_strings.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/raw_unicode_strings</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/raw_unicode_strings.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/raw_unicode_strings.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/raw_unicode_strings.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/raw_unicode_strings.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/raw_unicode_strings.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/raw_unicode_strings.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/raw_unicode_strings.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/ref_qualifiers</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/ref_qualifiers.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/ref_qualifiers.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/ref_qualifiers.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/ref_qualifiers.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/ref_qualifiers.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/ref_qualifiers.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/ref_qualifiers.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/return_type_deduction</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/return_type_deduction.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/return_type_deduction.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/return_type_deduction.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/return_type_deduction.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/return_type_deduction.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/return_type_deduction.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/return_type_deduction.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/rtti</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/rtti.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/rtti.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/rtti.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc100/cpp/rtti.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc110/cpp/rtti.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/rtti.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/rtti.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/rvalue_references</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/rvalue_references.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/rvalue_references.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/rvalue_references.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc100/cpp/rvalue_references.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc110/cpp/rvalue_references.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/rvalue_references.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/rvalue_references.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/sized_deallocation</td>
+    <td class="result fail"><a href="./test_results/clang_apple-7.3/cpp/sized_deallocation.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/sized_deallocation.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/sized_deallocation.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/sized_deallocation.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/sized_deallocation.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/sized_deallocation.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/sized_deallocation.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/static_assert</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/static_assert.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/static_assert.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/static_assert.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc100/cpp/static_assert.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc110/cpp/static_assert.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/static_assert.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/static_assert.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/static_assert-201411</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/static_assert-201411.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/static_assert-201411.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/gcc-5.4/cpp/static_assert-201411.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/static_assert-201411.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/static_assert-201411.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/static_assert-201411.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc140/cpp/static_assert-201411.html">&#10005;</a></td>
+</tr>
+<tr><td>cpp/unicode_characters</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/unicode_characters.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/unicode_characters.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/unicode_characters.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/unicode_characters.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/unicode_characters.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/unicode_characters.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/unicode_characters.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/unicode_literals</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/unicode_literals.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/unicode_literals.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/unicode_literals.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/unicode_literals.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/unicode_literals.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/unicode_literals.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/unicode_literals.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/user_defined_literals</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/user_defined_literals.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/user_defined_literals.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/user_defined_literals.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/user_defined_literals.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/user_defined_literals.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/user_defined_literals.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/user_defined_literals.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/variable_templates</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/variable_templates.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/variable_templates.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/variable_templates.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/variable_templates.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/variable_templates.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc120/cpp/variable_templates.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/variable_templates.html">&#10003;</a></td>
+</tr>
+<tr><td>cpp/variadic_templates</td>
+    <td class="result pass"><a href="./test_results/clang_apple-7.3/cpp/variadic_templates.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/clang_c2-3.8/cpp/variadic_templates.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/gcc-5.4/cpp/variadic_templates.html">&#10003;</a></td>
+    <td class="result fail"><a href="./test_results/msvc100/cpp/variadic_templates.html">&#10005;</a></td>
+    <td class="result fail"><a href="./test_results/msvc110/cpp/variadic_templates.html">&#10005;</a></td>
+    <td class="result pass"><a href="./test_results/msvc120/cpp/variadic_templates.html">&#10003;</a></td>
+    <td class="result pass"><a href="./test_results/msvc140/cpp/variadic_templates.html">&#10003;</a></td>
+</tr>
+</table>
+
+
+<hr>
+
+</body>
+</html>

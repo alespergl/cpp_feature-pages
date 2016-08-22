@@ -1,0 +1,6 @@
+alignof.cpp
+alignof.cpp(23) : error C2144: syntax error : 'char' should be preceded by ')'
+alignof.cpp(23) : error C3861: 'alignof': identifier not found
+alignof.cpp(23) : error C2059: syntax error : ')'
+alignof.cpp(27) : error C2143: syntax error : missing ';' before '}'
+alignof.cpp(27) : error C2059: syntax error : '}'

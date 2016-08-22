@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="pass">pass</span>
+<h1>cpp/binary_literals</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+</code><code class="cpp">/*
+The binary literal syntax is supported.
+
+Reference:
+    [N3472](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)
+
+Check with:
+    #ifdef __cpp_binary_literals
+    #if __has_feature(cxx_binary_literals)
+*/
+
+int b = 0b101010;
+int B = 0B010101;
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">g++ (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-std=c++1z -pedantic-errors -Wno-attributes
+</pre>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+<hr><h3>Program Output</h3>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+</body>
+</html>

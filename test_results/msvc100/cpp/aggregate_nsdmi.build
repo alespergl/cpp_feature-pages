@@ -1,0 +1,6 @@
+aggregate_nsdmi.cpp
+aggregate_nsdmi.cpp(19) : error C2327: 'S::b' : is not a type name, static, or enumerator
+aggregate_nsdmi.cpp(19) : error C2065: 'b' : undeclared identifier
+aggregate_nsdmi.cpp(19) : error C2327: 'S::a' : is not a type name, static, or enumerator
+aggregate_nsdmi.cpp(19) : error C2065: 'a' : undeclared identifier
+aggregate_nsdmi.cpp(19) : error C2864: 'S::d' : only static const integral data members can be initialized within a class

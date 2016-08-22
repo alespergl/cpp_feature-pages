@@ -1,0 +1,10 @@
+enumerator_attributes.cpp:14:7: error: expected ‘}’ before ‘[’ token
+     B [[attr]],
+       ^
+enumerator_attributes.cpp:14:15: error: expected unqualified-id before ‘,’ token
+     B [[attr]],
+               ^
+enumerator_attributes.cpp:16:1: error: expected initializer before ‘}’ token
+ };
+ ^
+enumerator_attributes.cpp:16:1: error: expected declaration before ‘}’ token

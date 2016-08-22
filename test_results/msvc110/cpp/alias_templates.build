@@ -1,0 +1,6 @@
+alias_templates.cpp
+alias_templates.cpp(13) : error C2988: unrecognizable template declaration/definition
+alias_templates.cpp(13) : error C2059: syntax error : 'using'
+alias_templates.cpp(16) : error C2182: 'f' : illegal use of type 'void'
+alias_templates.cpp(16) : error C2998: 'int f' : cannot be a template definition
+alias_templates.cpp(17) : error C2182: 'g' : illegal use of type 'void'

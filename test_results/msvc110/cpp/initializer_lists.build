@@ -1,0 +1,18 @@
+initializer_lists.cpp
+initializer_lists.cpp(14) : error C2470: 'n0' : looks like a function definition, but there is no parameter list; skipping apparent body
+initializer_lists.cpp(15) : error C2470: 'n1' : looks like a function definition, but there is no parameter list; skipping apparent body
+initializer_lists.cpp(16) : error C2470: 's1' : looks like a function definition, but there is no parameter list; skipping apparent body
+initializer_lists.cpp(17) : error C2470: 's2' : looks like a function definition, but there is no parameter list; skipping apparent body
+initializer_lists.cpp(18) : error C2470: 's3' : looks like a function definition, but there is no parameter list; skipping apparent body
+initializer_lists.cpp(21) : error C2062: type 'double' unexpected
+initializer_lists.cpp(21) : error C2143: syntax error : missing ';' before '{'
+initializer_lists.cpp(21) : error C2447: '{' : missing function header (old-style formal list?)
+initializer_lists.cpp(23) : error C2552: 'm' : non-aggregates cannot be initialized with initializer list
+        'std::map<_Kty,_Ty>' : Types with a base are not aggregate
+        with
+        [
+            _Kty=int,
+            _Ty=std::string
+        ]
+initializer_lists.cpp(24) : error C2078: too many initializers
+initializer_lists.cpp(25) : fatal error C1903: unable to recover from previous error(s); stopping compilation

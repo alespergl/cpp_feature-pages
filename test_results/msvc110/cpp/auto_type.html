@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="pass">pass</span>
+<h1>cpp/auto_type</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</code><code class="cpp">/*
+The auto type specifier is supported.
+
+Check with:
+    #if __has_feature(cxx_auto_type)
+*/
+
+struct S {};
+
+S g() { return S(); }
+
+auto i = 42;
+auto f = 1.0;
+auto s = g();
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) C/C++ Optimizing Compiler Version 17.00.50727.1 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">auto_type.cpp
+</pre>
+<hr><h3>Program Output</h3>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+</body>
+</html>

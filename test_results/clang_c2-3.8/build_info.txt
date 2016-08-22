@@ -1,0 +1,8 @@
+clang with Microsoft CodeGen version 3.8.0 
+Provided as - is without support
+c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ClangC2\bin\x86\x86\c2.dll version 19.0.25515.0
+Target: i686-pc-windows-msvc
+Thread model: posix
+InstalledDir: c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ClangC2\bin\x86
+
+-std=c++1z -pedantic-errors -fno-ms-compatibility -fexceptions -fsized-deallocation

@@ -1,0 +1,9 @@
+fold_expressions.cpp
+fold_expressions.cpp(11) : error C2143: syntax error : missing ',' before '...'
+fold_expressions.cpp(12) : error C2065: 'T' : undeclared identifier
+fold_expressions.cpp(12) : error C2143: syntax error : missing ')' before '...'
+fold_expressions.cpp(12) : error C2059: syntax error : ')'
+fold_expressions.cpp(19) : error C2143: syntax error : missing ',' before '...'
+fold_expressions.cpp(20) : error C2065: 'T' : undeclared identifier
+fold_expressions.cpp(20) : error C2143: syntax error : missing ')' before '...'
+fold_expressions.cpp(20) : error C2059: syntax error : ')'

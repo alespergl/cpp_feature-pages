@@ -1,0 +1,6 @@
+noexcept_function_type.cpp
+noexcept_function_type.cpp(15): error C2279: exception specification cannot appear in a typedef declaration
+noexcept_function_type.cpp(20): error C2039: 'type': is not a member of 'std::enable_if<false,int>'
+noexcept_function_type.cpp(17): note: see declaration of 'std::enable_if<false,int>'
+noexcept_function_type.cpp(20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+noexcept_function_type.cpp(20): error C2146: syntax error: missing ';' before identifier 'i'

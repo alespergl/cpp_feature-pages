@@ -1,0 +1,2 @@
+delegating_constructors.cpp
+delegating_constructors.cpp(17) : error C2614: 'X' : illegal member initialization: 'X' is not a base or member

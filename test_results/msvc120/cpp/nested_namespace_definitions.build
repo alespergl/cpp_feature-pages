@@ -1,0 +1,4 @@
+nested_namespace_definitions.cpp
+nested_namespace_definitions.cpp(11) : error C2653: 'A' : is not a class or namespace name
+nested_namespace_definitions.cpp(19) : error C2653: 'A' : is not a class or namespace name
+nested_namespace_definitions.cpp(19) : error C3861: 'f': identifier not found

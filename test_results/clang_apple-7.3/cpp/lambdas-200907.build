@@ -1,0 +1,4 @@
+lambdas-200907.cpp:28:5: warning: expression result unused [-Wunused-value]
+    [=] {                   // x and r are not captured (appearance in a decltype operand is not a "use")
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.

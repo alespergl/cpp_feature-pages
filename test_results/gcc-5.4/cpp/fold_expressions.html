@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/fold_expressions</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</code><code class="cpp">/*
+Folding expressions are supported.
+
+Reference:
+    [N4295](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html)
+
+Check with:
+    #ifdef __cpp_fold_expressions
+*/
+
+template&lt;typename... T&gt;
+bool f(T... args)
+{
+    return (true + ... + args);
+}
+
+bool b1 = f(1, 2, 3);
+
+template&lt;typename... T&gt;
+bool all(T... args)
+{
+    return (... &amp;&amp; args);
+}
+
+bool b2 = all(1, 2, 3);
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">g++ (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-std=c++1z -pedantic-errors -Wno-attributes
+</pre>
+<pre class="terminal">fold_expressions.cpp: In function ‘bool f(T ...)’:
+fold_expressions.cpp:14:20: error: expected primary-expression before ‘...’ token
+     return (true + ... + args);
+                    ^
+fold_expressions.cpp:14:20: error: expected ‘)’ before ‘...’ token
+fold_expressions.cpp: In function ‘bool all(T ...)’:
+fold_expressions.cpp:22:13: error: expected primary-expression before ‘...’ token
+     return (... &amp;&amp; args);
+             ^
+fold_expressions.cpp:22:13: error: expected ‘)’ before ‘...’ token
+</pre>
+</body>
+</html>

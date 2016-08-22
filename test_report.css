@@ -1,0 +1,20 @@
+body { font-family: Calibri, sans-serif }
+code, pre { font-family: Consolas, monospace; font-size: 10pt }
+h1 { font-size: 18pt; font-weight: bold; display: inline-block; margin: 0.4em 0.2em }
+h3 { font-size: 11pt; font-weight: bold; background-color: #EEEEE0; padding: 0.2em }
+span.fail, span.pass {
+    display: inline-block;
+    border-radius: 6px; padding: 0 6px;
+    position: relative; top: -0.2em;
+    color: white;
+    font-family: Consolas, monospace;
+    font-size: 9pt
+}
+span.fail { background-color: red }
+span.pass { background-color: green }
+pre { border: 1px solid lightgray }
+pre.terminal { padding: 0.5em; background-color: black; color: white }
+pre.terminal.info { background-color: white; color: gray; font-size: .7em }
+code { display: block; padding: 0.5em; overflow-x: auto }
+code.ln { float: left; color: gray; background-color: #FEF9ED }
+.empty { color: gray; font-style: italic }

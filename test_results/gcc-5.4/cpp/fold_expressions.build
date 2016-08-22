@@ -1,0 +1,10 @@
+fold_expressions.cpp: In function ‘bool f(T ...)’:
+fold_expressions.cpp:14:20: error: expected primary-expression before ‘...’ token
+     return (true + ... + args);
+                    ^
+fold_expressions.cpp:14:20: error: expected ‘)’ before ‘...’ token
+fold_expressions.cpp: In function ‘bool all(T ...)’:
+fold_expressions.cpp:22:13: error: expected primary-expression before ‘...’ token
+     return (... && args);
+             ^
+fold_expressions.cpp:22:13: error: expected ‘)’ before ‘...’ token

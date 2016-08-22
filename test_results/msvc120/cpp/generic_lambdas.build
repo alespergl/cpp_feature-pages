@@ -1,0 +1,6 @@
+generic_lambdas.cpp
+generic_lambdas.cpp(12) : error C3533: 'auto': a parameter cannot have a type that contains 'auto'
+generic_lambdas.cpp(15) : error C2664: 'int (__vectorcall *)(int)' : cannot convert argument 1 from 'const char [6]' to 'int'
+        There is no context in which this conversion is possible
+generic_lambdas.cpp(19) : error C2440: 'initializing' : cannot convert from '<lambda_989812cb92e52ed4aeb97b796d2d3e15>' to 'char (__cdecl *)(char)'
+        No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called

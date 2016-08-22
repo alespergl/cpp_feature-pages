@@ -1,0 +1,3 @@
+range_based_for.cpp
+range_based_for.cpp(18) : error C2143: syntax error : missing ',' before ':'
+range_based_for.cpp(22) : error C2143: syntax error : missing ',' before ':'

@@ -1,0 +1,12 @@
+nested_namespace_definitions.cpp:11:12: error: expected ‘{’ before ‘::’ token
+ namespace A::B
+            ^
+nested_namespace_definitions.cpp:11:14: error: ‘B’ in namespace ‘::’ does not name a type
+ namespace A::B
+              ^
+nested_namespace_definitions.cpp:19:12: error: ‘A::B’ has not been declared
+ int i = A::B::f();
+            ^
+nested_namespace_definitions.cpp:23:1: error: expected ‘}’ at end of input
+ }
+ ^

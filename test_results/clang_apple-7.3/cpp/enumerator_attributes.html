@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="pass">pass</span>
+<h1>cpp/enumerator_attributes</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</code><code class="cpp">/*
+Attribute syntax is allowed on enumerator declarations.
+
+Reference:
+    [N4266](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)
+
+Check with:
+    #ifdef __cpp_enumerator_attributes
+*/
+
+enum [[attr]]
+{
+    A,
+    B [[attr]],
+    C
+};
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+-std=c++1z -pedantic-errors -fexceptions
+</pre>
+<pre class="terminal">enumerator_attributes.cpp:11:8: warning: unknown attribute &#39;attr&#39; ignored [-Wunknown-attributes]
+enum [[attr]]
+       ^
+enumerator_attributes.cpp:14:9: warning: unknown attribute &#39;attr&#39; ignored [-Wunknown-attributes]
+    B [[attr]],
+        ^
+2 warnings generated.
+</pre>
+<hr><h3>Program Output</h3>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+</body>
+</html>

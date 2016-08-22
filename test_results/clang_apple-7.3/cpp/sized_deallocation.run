@@ -1,0 +1,2 @@
+ERROR: sized operator delete was not called
+ERROR: sized operator delete[] was not called.

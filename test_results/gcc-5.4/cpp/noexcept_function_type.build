@@ -1,0 +1,6 @@
+noexcept_function_type.cpp:15:18: error: ‘G’ declared with an exception specification
+ typedef void G() noexcept;
+                  ^
+noexcept_function_type.cpp:20:4: error: ‘type’ in ‘struct std::enable_if<false, int>’ does not name a type
+ >::type i = 42;
+    ^

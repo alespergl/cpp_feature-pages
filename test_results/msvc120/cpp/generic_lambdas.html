@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/generic_lambdas</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</code><code class="cpp">/*
+Generic (polymorphic) lambda expressions are supported.
+
+Reference:
+    [N3649](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3649.html)
+
+Check with:
+    #ifdef __cpp_generic_lambdas
+    #if __has_feature(cxx_generic_lambdas)
+*/
+
+auto identity = [](auto a) { return a; };
+
+int three = identity(3);
+const char* hello = identity(&quot;hello&quot;);
+
+// Conversion to function pointer for capture-less lambdas
+int (*fpi)(int) = identity;
+char (*fpc)(char) = identity;
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) C/C++ Optimizing Compiler Version 18.00.31101 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">generic_lambdas.cpp
+generic_lambdas.cpp(12) : error C3533: &#39;auto&#39;: a parameter cannot have a type that contains &#39;auto&#39;
+generic_lambdas.cpp(15) : error C2664: &#39;int (__vectorcall *)(int)&#39; : cannot convert argument 1 from &#39;const char [6]&#39; to &#39;int&#39;
+        There is no context in which this conversion is possible
+generic_lambdas.cpp(19) : error C2440: &#39;initializing&#39; : cannot convert from &#39;&lt;lambda_989812cb92e52ed4aeb97b796d2d3e15&gt;&#39; to &#39;char (__cdecl *)(char)&#39;
+        No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+</pre>
+</body>
+</html>

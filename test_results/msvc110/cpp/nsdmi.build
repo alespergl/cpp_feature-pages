@@ -1,0 +1,2 @@
+nsdmi.cpp
+nsdmi.cpp(14) : error C2864: 'A::a' : only static const integral data members can be initialized within a class

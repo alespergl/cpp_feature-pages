@@ -1,0 +1,4 @@
+static_assert-201411.cpp:11:21: error: expected ‘,’ before ‘)’ token
+ static_assert(42 > 0);
+                     ^
+static_assert-201411.cpp:11:21: error: expected string-literal before ‘)’ token

@@ -1,0 +1,16 @@
+attributes.cpp:12:10: warning: unknown attribute 'attr' ignored [-Wunknown-attributes]
+struct [[attr]] S {} s;
+         ^
+attributes.cpp:28:11: warning: unknown attribute 'fallthrough' ignored [-Wunknown-attributes]
+        [[fallthrough]];
+          ^
+attributes.cpp:34:27: warning: unknown attribute 'maybe_unused' ignored [-Wunknown-attributes]
+[[maybe_unused]] void h([[maybe_unused]] int i)
+                          ^
+attributes.cpp:34:3: warning: unknown attribute 'maybe_unused' ignored [-Wunknown-attributes]
+[[maybe_unused]] void h([[maybe_unused]] int i)
+  ^
+attributes.cpp:36:7: warning: unknown attribute 'maybe_unused' ignored [-Wunknown-attributes]
+    [[maybe_unused]] bool b = (i != 0);
+      ^
+5 warnings generated.

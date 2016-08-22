@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/attributes</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</code><code class="cpp">/*
+The attributes syntax is supported.
+
+Reference:
+    [N2761](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2761.pdf)
+
+Check with:
+    #ifdef __cpp_attributes
+    #if __has_feature(cxx_attributes)
+*/
+
+struct [[attr]] S {} s;
+
+[[noreturn]] void f()
+{
+    throw &quot;error&quot;;
+}
+
+void a() {}
+void b() {}
+
+void g(int n)
+{
+    switch(n)
+    {
+    case 1:
+        a();
+        [[fallthrough]];
+    default:
+        b();
+    }
+}
+
+[[maybe_unused]] void h([[maybe_unused]] int i)
+{
+    [[maybe_unused]] bool b = (i != 0);
+}
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) C/C++ Optimizing Compiler Version 18.00.31101 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">attributes.cpp
+attributes.cpp(12) : error C2332: &#39;struct&#39; : missing tag name
+attributes.cpp(12) : error C2143: syntax error : missing &#39;;&#39; before &#39;[&#39;
+attributes.cpp(12) : error C3409: empty attribute block is not allowed
+attributes.cpp(12) : error C2143: syntax error : missing &#39;]&#39; before &#39;[&#39;
+attributes.cpp(12) : error C2337: &#39;attr&#39; : attribute not found
+attributes.cpp(12) : error C2059: syntax error : &#39;]&#39;
+attributes.cpp(12) : error C2143: syntax error : missing &#39;;&#39; before &#39;{&#39;
+attributes.cpp(12) : error C2447: &#39;{&#39; : missing function header (old-style formal list?)
+attributes.cpp(12) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+attributes.cpp(14) : error C3409: empty attribute block is not allowed
+attributes.cpp(14) : error C2143: syntax error : missing &#39;]&#39; before &#39;[&#39;
+attributes.cpp(14) : error C2337: &#39;noreturn&#39; : attribute not found
+attributes.cpp(14) : error C2059: syntax error : &#39;]&#39;
+attributes.cpp(15) : error C2143: syntax error : missing &#39;;&#39; before &#39;{&#39;
+attributes.cpp(15) : error C2447: &#39;{&#39; : missing function header (old-style formal list?)
+attributes.cpp(28) : error C3409: empty attribute block is not allowed
+attributes.cpp(28) : error C2143: syntax error : missing &#39;]&#39; before &#39;[&#39;
+attributes.cpp(28) : error C2337: &#39;fallthrough&#39; : attribute not found
+attributes.cpp(28) : error C2143: syntax error : missing &#39;;&#39; before &#39;]&#39;
+attributes.cpp(34) : error C3409: empty attribute block is not allowed
+attributes.cpp(34) : error C2143: syntax error : missing &#39;]&#39; before &#39;[&#39;
+attributes.cpp(34) : error C2337: &#39;maybe_unused&#39; : attribute not found
+attributes.cpp(34) : error C2059: syntax error : &#39;]&#39;
+attributes.cpp(35) : error C2143: syntax error : missing &#39;;&#39; before &#39;{&#39;
+attributes.cpp(35) : error C2447: &#39;{&#39; : missing function header (old-style formal list?)
+</pre>
+</body>
+</html>

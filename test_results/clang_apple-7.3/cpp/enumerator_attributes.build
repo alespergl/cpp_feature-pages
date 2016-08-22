@@ -1,0 +1,7 @@
+enumerator_attributes.cpp:11:8: warning: unknown attribute 'attr' ignored [-Wunknown-attributes]
+enum [[attr]]
+       ^
+enumerator_attributes.cpp:14:9: warning: unknown attribute 'attr' ignored [-Wunknown-attributes]
+    B [[attr]],
+        ^
+2 warnings generated.

@@ -1,0 +1,7 @@
+unicode_characters.cpp
+unicode_characters.cpp(11) : error C2146: syntax error : missing ';' before identifier 'c16'
+unicode_characters.cpp(11) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+unicode_characters.cpp(11) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+unicode_characters.cpp(12) : error C2146: syntax error : missing ';' before identifier 'c32'
+unicode_characters.cpp(12) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+unicode_characters.cpp(12) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int

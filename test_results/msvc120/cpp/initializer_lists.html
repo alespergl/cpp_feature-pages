@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="pass">pass</span>
+<h1>cpp/initializer_lists</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</code><code class="cpp">/*
+Initializer lists are supported.
+
+Reference:
+    [N2672](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2672.pdf)
+
+Check with:
+    #ifdef __cpp_initializer_lists
+*/
+
+#include &lt;map&gt;
+#include &lt;string&gt;
+
+int n0 {};                              // value-initialization (to zero)
+int n1 {1};                             // direct-list-initialization
+std::string s1 {&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;};    // initializer-list constructor call
+std::string s2 {s1, 2, 2};              // regular constructor call
+std::string s3 {0x61, &#39;a&#39;};             // initializer-list ctor is preferred to (int, char)
+
+int n2 = {1};                           // copy-list-initialization
+double d = double{1.2};                 // list-initialization of a temporary, then copy-init
+
+std::map&lt;int, std::string&gt; m = {        // nested list-initialization
+    {1, &quot;a&quot;},
+    {2, {&#39;a&#39;, &#39;b&#39;, &#39;c&#39;}},
+    {3, s1}
+};
+
+const int (&amp;ar)[2] = {1,2};             // binds a lvalue reference to a temporary array
+int&amp;&amp; r1 = {1};                         // binds a rvalue reference to a temporary int
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) C/C++ Optimizing Compiler Version 18.00.31101 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">initializer_lists.cpp
+</pre>
+<hr><h3>Program Output</h3>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+</body>
+</html>

@@ -1,0 +1,7 @@
+noexcept_function_type.cpp:15:18: error: exception specifications are not allowed in typedefs
+typedef void G() noexcept;
+                 ^
+noexcept_function_type.cpp:20:4: error: no type named 'type' in 'std::enable_if<false, int>'
+>::type i = 42;
+~~~^
+2 errors generated.

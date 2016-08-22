@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="pass">pass</span>
+<h1>cpp/static_assert-201411</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+</code><code class="cpp">/*
+Single-parameter static_assert is supported.
+
+Reference:
+    [N3928](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf)
+
+Check with:
+    #if defined(__cpp_static_assert) &amp;&amp; (__cpp_static_assert &gt;= 201411)
+*/
+
+static_assert(42 &gt; 0);
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+-std=c++1z -pedantic-errors -fexceptions
+</pre>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+<hr><h3>Program Output</h3>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+</body>
+</html>

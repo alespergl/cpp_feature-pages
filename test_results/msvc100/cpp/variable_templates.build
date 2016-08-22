@@ -1,0 +1,2 @@
+variable_templates.cpp
+variable_templates.cpp(13) : error C2998: 'T pi' : cannot be a template definition

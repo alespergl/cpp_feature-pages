@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/return_type_deduction</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+</code><code class="cpp">/*
+Return type deduction for normal functions is supported.
+
+Reference:
+    [N3638](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)
+
+Check with:
+    #ifdef __cpp_return_type_deduction
+    #if __has_feature(cxx_return_type_deduction)
+*/
+
+auto f();               // return type is unknown
+auto f() { return 42; } // return type is int
+auto f();               // redeclaration
+
+template&lt;class T&gt; auto g(T t);              // forward declaration
+template&lt;class T&gt; auto g(T t) { return t; } // return type is deduced at instantiation time
+template&lt;class T&gt; auto g(T t);              // redeclaration
+typedef decltype(g(1)) gint_t;              // must instantiate g&lt;int&gt; to deduce return type
+
+template&lt;class T&gt; struct A { static T t; };
+template&lt;class T&gt; auto&amp; h() { return A&lt;T&gt;::t; } // returns by reference
+
+bool search(int i)
+{
+    return i == 5;
+}
+
+auto iterate(int len)
+{
+    for(int i = 0; i &lt; len; ++i)
+        if(search(i))
+            return i;
+
+    return -1;
+}
+
+auto sum(int i)
+{
+    if(i == 1)
+        return i; // return type deduced to int
+    else
+        return sum(i - 1) + i; // ok to recurse
+}
+
+auto x1 = [](int i) { return i; };
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) C/C++ Optimizing Compiler Version 17.00.50727.1 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">return_type_deduction.cpp
+return_type_deduction.cpp(12) : error C3551: expected a trailing return type
+return_type_deduction.cpp(13) : error C3551: expected a trailing return type
+return_type_deduction.cpp(14) : error C3551: expected a trailing return type
+return_type_deduction.cpp(16) : error C3551: expected a trailing return type
+return_type_deduction.cpp(17) : error C3551: expected a trailing return type
+return_type_deduction.cpp(18) : error C3551: expected a trailing return type
+return_type_deduction.cpp(22) : error C3550: only plain &#39;auto&#39; is allowed as a function return type
+return_type_deduction.cpp(22) : error C3551: expected a trailing return type
+return_type_deduction.cpp(30) : error C3551: expected a trailing return type
+return_type_deduction.cpp(39) : error C3551: expected a trailing return type
+</pre>
+</body>
+</html>

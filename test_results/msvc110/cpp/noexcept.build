@@ -1,0 +1,6 @@
+noexcept.cpp
+noexcept.cpp(11) : error C3646: 'noexcept' : unknown override specifier
+noexcept.cpp(12) : error C3646: 'noexcept' : unknown override specifier
+noexcept.cpp(12) : error C2072: 'g' : initialization of a function
+noexcept.cpp(12) : error C2440: 'initializing' : cannot convert from 'bool' to 'void (void)'
+        There are no conversions to function types, although there are conversions to references or pointers to functions

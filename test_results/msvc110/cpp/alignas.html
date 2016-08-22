@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/alignas</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</code><code class="cpp">/*
+The alignas keyword is available.
+
+Reference:
+    [N2341](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2341.pdf)
+
+Check with:
+    #if __has_feature(cxx_alignas)
+*/
+
+struct alignas(16) sse_t
+{
+    float sse_data[4];
+};
+
+alignas(128) char cacheline[128];
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) C/C++ Optimizing Compiler Version 17.00.50727.1 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">alignas.cpp
+alignas.cpp(11) : error C2059: syntax error : &#39;constant&#39;
+alignas.cpp(12) : error C2143: syntax error : missing &#39;;&#39; before &#39;{&#39;
+alignas.cpp(12) : error C2447: &#39;{&#39; : missing function header (old-style formal list?)
+alignas.cpp(16) : error C2059: syntax error : &#39;constant&#39;
+</pre>
+</body>
+</html>

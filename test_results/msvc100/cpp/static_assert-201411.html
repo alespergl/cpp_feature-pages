@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/static_assert-201411</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+</code><code class="cpp">/*
+Single-parameter static_assert is supported.
+
+Reference:
+    [N3928](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf)
+
+Check with:
+    #if defined(__cpp_static_assert) &amp;&amp; (__cpp_static_assert &gt;= 201411)
+*/
+
+static_assert(42 &gt; 0);
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.40219.01 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">static_assert-201411.cpp
+static_assert-201411.cpp(11) : error C2143: syntax error : missing &#39;,&#39; before &#39;)&#39;
+static_assert-201411.cpp(11) : error C2059: syntax error : &#39;)&#39;
+</pre>
+</body>
+</html>

@@ -1,0 +1,4 @@
+namespace_attributes.cpp:11:13: warning: unknown attribute 'attr' ignored [-Wunknown-attributes]
+namespace [[attr]]
+            ^
+1 warning generated.

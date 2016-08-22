@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/lambdas-200907</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</code><code class="cpp">/*
+Lambda expressions according to new wording are supported.
+
+Reference:
+    [N2927](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2927.pdf)
+
+Check with:
+    #if defined(__cpp_lambdas) &amp;&amp; (__cpp_lambdas &gt;= 200907)
+*/
+
+class non_capturable
+{
+    public:  non_capturable() {}
+    private: non_capturable(const non_capturable&amp;) {}
+};
+
+int main()
+{
+    int i = 0;
+
+    auto l1 = [&amp;] {};       // by-reference capture default
+    auto l2 = [=] {};       // by-copy capture default
+    auto l3 = [&amp;, i] {};    // by-reference capture, except i is captured by copy
+    auto l4 = [=, &amp;i] {};   // by-copy capture, except i is captured by reference
+
+    non_capturable x, &amp;r = x;
+
+    [=] {                   // x and r are not captured (appearance in a decltype operand is not a &quot;use&quot;)
+        decltype(x) y1;
+        decltype(r) r1 = y1;
+    };
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) C/C++ Optimizing Compiler Version 18.00.31101 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">lambdas-200907.cpp
+lambdas-200907.cpp(31) : error C2248: &#39;non_capturable::non_capturable&#39; : cannot access private member declared in class &#39;non_capturable&#39;
+        lambdas-200907.cpp(14) : see declaration of &#39;non_capturable::non_capturable&#39;
+        lambdas-200907.cpp(12) : see declaration of &#39;non_capturable&#39;
+        lambdas-200907.cpp(14) : see declaration of &#39;non_capturable::non_capturable&#39;
+        lambdas-200907.cpp(12) : see declaration of &#39;non_capturable&#39;
+lambdas-200907.cpp(30) : error C2248: &#39;non_capturable::non_capturable&#39; : cannot access private member declared in class &#39;non_capturable&#39;
+        lambdas-200907.cpp(14) : see declaration of &#39;non_capturable::non_capturable&#39;
+        lambdas-200907.cpp(12) : see declaration of &#39;non_capturable&#39;
+</pre>
+</body>
+</html>

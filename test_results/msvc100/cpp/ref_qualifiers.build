@@ -1,0 +1,12 @@
+ref_qualifiers.cpp
+ref_qualifiers.cpp(14) : error C2143: syntax error : missing ';' before '&'
+ref_qualifiers.cpp(14) : error C2059: syntax error : '{'
+ref_qualifiers.cpp(14) : error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+ref_qualifiers.cpp(15) : error C2143: syntax error : missing ';' before '&'
+ref_qualifiers.cpp(15) : error C2059: syntax error : '{'
+ref_qualifiers.cpp(15) : error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+ref_qualifiers.cpp(16) : error C2143: syntax error : missing ';' before '&&'
+ref_qualifiers.cpp(16) : error C2535: 'void X::f(void)' : member function already defined or declared
+        ref_qualifiers.cpp(14) : see declaration of 'X::f'
+ref_qualifiers.cpp(16) : error C2059: syntax error : '{'
+ref_qualifiers.cpp(16) : error C2334: unexpected token(s) preceding '{'; skipping apparent function body

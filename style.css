@@ -1,0 +1,37 @@
+body { font-family: Calibri, sans-serif }
+table { border-spacing: 0 }
+tr:nth-child(even) { background-color: #ECF1EF; }
+td, th {
+    font-family: Consolas, monospace;
+    padding: 1px 0;
+    font-size: 10pt;
+}
+td.result { text-align: center }
+td.fail a { background-color: lightcoral }
+td.pass a { background-color: lightgreen }
+td.result a {
+    display: inline-block;
+    margin: 0 1.2em;
+    width: 3em;
+}
+td.result a:link, td.result a:visited { text-decoration: unset; color: unset }
+td.result a:hover { color: white }
+td.report_mismatch:before { content: '\26a0'; color: red; position: absolute }
+th {
+    height: 0;
+    padding: 0;
+}
+th div {
+    position: absolute;
+    height: 1.2em;
+    transform: translate(5.4em) rotate(90deg);
+    transform-origin: left top;
+    background-color: #ECF1EF;
+    padding: 0 0.3em;
+}
+th div span {
+    font-family: Verdana, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    white-space: nowrap;
+}

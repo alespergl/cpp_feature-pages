@@ -1,0 +1,9 @@
+enumerator_attributes.cpp
+enumerator_attributes.cpp(11) : error C2332: 'enum' : missing tag name
+enumerator_attributes.cpp(11) : error C2143: syntax error : missing ';' before '['
+enumerator_attributes.cpp(11) : error C3409: empty attribute block is not allowed
+enumerator_attributes.cpp(11) : error C2143: syntax error : missing ']' before '['
+enumerator_attributes.cpp(11) : error C2337: 'attr' : attribute not found
+enumerator_attributes.cpp(11) : error C2059: syntax error : ']'
+enumerator_attributes.cpp(12) : error C2143: syntax error : missing ';' before '{'
+enumerator_attributes.cpp(12) : error C2447: '{' : missing function header (old-style formal list?)

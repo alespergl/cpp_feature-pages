@@ -1,0 +1,11 @@
+return_type_deduction.cpp
+return_type_deduction.cpp(12) : error C3551: expected a trailing return type
+return_type_deduction.cpp(13) : error C3551: expected a trailing return type
+return_type_deduction.cpp(14) : error C3551: expected a trailing return type
+return_type_deduction.cpp(16) : error C3551: expected a trailing return type
+return_type_deduction.cpp(17) : error C3551: expected a trailing return type
+return_type_deduction.cpp(18) : error C3551: expected a trailing return type
+return_type_deduction.cpp(22) : error C3550: 'auto &': only plain 'auto' is allowed as a function return type
+return_type_deduction.cpp(22) : error C3551: expected a trailing return type
+return_type_deduction.cpp(30) : error C3551: expected a trailing return type
+return_type_deduction.cpp(39) : error C3551: expected a trailing return type

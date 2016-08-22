@@ -1,0 +1,4 @@
+namespace_attributes.cpp
+namespace_attributes.cpp(11) : error C2059: syntax error : '['
+namespace_attributes.cpp(12) : error C2143: syntax error : missing ';' before '{'
+namespace_attributes.cpp(12) : error C2447: '{' : missing function header (old-style formal list?)

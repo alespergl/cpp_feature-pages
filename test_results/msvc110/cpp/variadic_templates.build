@@ -1,0 +1,10 @@
+variadic_templates.cpp
+variadic_templates.cpp(12) : error C2332: 'class' : missing tag name
+variadic_templates.cpp(12) : error C2993: '' : illegal type for non-type template parameter '<unnamed-tag>'
+variadic_templates.cpp(12) : error C2143: syntax error : missing ',' before '...'
+variadic_templates.cpp(13) : error C2065: 'Types' : undeclared identifier
+variadic_templates.cpp(13) : error C2143: syntax error : missing ')' before '...'
+variadic_templates.cpp(13) : error C2182: 'f' : illegal use of type 'void'
+variadic_templates.cpp(13) : error C2059: syntax error : ')'
+variadic_templates.cpp(18) : error C2143: syntax error : missing ';' before '{'
+variadic_templates.cpp(18) : error C2447: '{' : missing function header (old-style formal list?)

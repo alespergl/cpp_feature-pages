@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/decltype_auto</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</code><code class="cpp">/*
+The decltype(auto) type specifier is supported.
+
+References:
+    [N3638](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)
+
+Check with:
+    #ifdef __cpp_decltype_auto
+    #if __has_feature(cxx_decltype_auto)
+*/
+
+int i;
+int&amp;&amp; f() { return static_cast&lt;int&amp;&amp;&gt;(i); }
+decltype(auto) n = i;
+decltype(auto) m = f();
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.40219.01 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">decltype_auto.cpp
+decltype_auto.cpp(14) : error C2062: type &#39;auto&#39; unexpected
+decltype_auto.cpp(14) : error C3553: decltype expects an expression not a type
+decltype_auto.cpp(15) : error C2062: type &#39;auto&#39; unexpected
+decltype_auto.cpp(15) : error C3553: decltype expects an expression not a type
+</pre>
+</body>
+</html>

@@ -1,0 +1,2 @@
+constexpr-201304.cpp
+constexpr-201304.cpp(14): error C3249: illegal statement or sub-expression for 'constexpr' function

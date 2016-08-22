@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="pass">pass</span>
+<h1>cpp/decltype_auto</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</code><code class="cpp">/*
+The decltype(auto) type specifier is supported.
+
+References:
+    [N3638](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)
+
+Check with:
+    #ifdef __cpp_decltype_auto
+    #if __has_feature(cxx_decltype_auto)
+*/
+
+int i;
+int&amp;&amp; f() { return static_cast&lt;int&amp;&amp;&gt;(i); }
+decltype(auto) n = i;
+decltype(auto) m = f();
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">g++ (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-std=c++1z -pedantic-errors -Wno-attributes
+</pre>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+<hr><h3>Program Output</h3>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+</body>
+</html>

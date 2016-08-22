@@ -1,0 +1,5 @@
+alignas.cpp
+alignas.cpp(11) : error C2059: syntax error : 'constant'
+alignas.cpp(12) : error C2143: syntax error : missing ';' before '{'
+alignas.cpp(12) : error C2447: '{' : missing function header (old-style formal list?)
+alignas.cpp(16) : error C2059: syntax error : 'constant'

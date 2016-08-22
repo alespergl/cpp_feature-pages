@@ -1,0 +1,5 @@
+raw_strings.cpp
+raw_strings.cpp(12) : error C2143: syntax error : missing ';' before 'string'
+raw_strings.cpp(12) : error C2059: syntax error : 'string'
+raw_strings.cpp(13) : error C2143: syntax error : missing ';' before 'string'
+raw_strings.cpp(13) : error C2059: syntax error : 'string'

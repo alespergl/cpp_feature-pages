@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/enumerator_attributes</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</code><code class="cpp">/*
+Attribute syntax is allowed on enumerator declarations.
+
+Reference:
+    [N4266](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)
+
+Check with:
+    #ifdef __cpp_enumerator_attributes
+*/
+
+enum [[attr]]
+{
+    A,
+    B [[attr]],
+    C
+};
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">g++ (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-std=c++1z -pedantic-errors -Wno-attributes
+</pre>
+<pre class="terminal">enumerator_attributes.cpp:14:7: error: expected ‘}’ before ‘[’ token
+     B [[attr]],
+       ^
+enumerator_attributes.cpp:14:15: error: expected unqualified-id before ‘,’ token
+     B [[attr]],
+               ^
+enumerator_attributes.cpp:16:1: error: expected initializer before ‘}’ token
+ };
+ ^
+enumerator_attributes.cpp:16:1: error: expected declaration before ‘}’ token
+</pre>
+</body>
+</html>

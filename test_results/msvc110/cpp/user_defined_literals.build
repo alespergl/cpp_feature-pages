@@ -1,0 +1,23 @@
+user_defined_literals.cpp
+user_defined_literals.cpp(14) : error C2833: 'operator string' is not a recognized operator or type
+user_defined_literals.cpp(14) : error C2143: syntax error : missing ';' before 'newline'
+user_defined_literals.cpp(14) : error C2059: syntax error : 'newline'
+user_defined_literals.cpp(14) : error C2143: syntax error : missing ';' before '{'
+user_defined_literals.cpp(14) : error C2447: '{' : missing function header (old-style formal list?)
+user_defined_literals.cpp(15) : error C2833: 'operator string' is not a recognized operator or type
+user_defined_literals.cpp(15) : error C2143: syntax error : missing ';' before 'newline'
+user_defined_literals.cpp(15) : error C2059: syntax error : 'newline'
+user_defined_literals.cpp(15) : error C2143: syntax error : missing ';' before '{'
+user_defined_literals.cpp(15) : error C2447: '{' : missing function header (old-style formal list?)
+user_defined_literals.cpp(16) : error C2833: 'operator string' is not a recognized operator or type
+user_defined_literals.cpp(16) : error C2059: syntax error : 'newline'
+user_defined_literals.cpp(16) : error C2143: syntax error : missing ';' before '{'
+user_defined_literals.cpp(16) : error C2447: '{' : missing function header (old-style formal list?)
+user_defined_literals.cpp(20) : error C2059: syntax error : 'bad suffix on number'
+user_defined_literals.cpp(20) : error C2146: syntax error : missing ';' before identifier '_w'
+user_defined_literals.cpp(20) : error C2065: '_w' : undeclared identifier
+user_defined_literals.cpp(21) : error C2059: syntax error : 'bad suffix on number'
+user_defined_literals.cpp(21) : error C2146: syntax error : missing ';' before identifier '_w'
+user_defined_literals.cpp(21) : error C2065: '_w' : undeclared identifier
+user_defined_literals.cpp(22) : error C2146: syntax error : missing ';' before identifier '_w'
+user_defined_literals.cpp(22) : error C2065: '_w' : undeclared identifier

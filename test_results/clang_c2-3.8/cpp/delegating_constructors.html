@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="pass">pass</span>
+<h1>cpp/delegating_constructors</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</code><code class="cpp">/*
+Delegating constructors are supported.
+
+Reference:
+    [N1986](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1986.pdf)
+
+Check with:
+    #ifdef __cpp_delegating_constructors
+    #if __has_feature(cxx_delegating_constructors)
+*/
+
+class X
+{
+    int i_;
+public:
+    X(int i) : i_(i) {}
+    X() : X(42) {}
+};
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">clang with Microsoft CodeGen version 3.8.0 
+Provided as - is without support
+c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ClangC2\bin\x86\x86\c2.dll version 19.0.25515.0
+Target: i686-pc-windows-msvc
+Thread model: posix
+InstalledDir: c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ClangC2\bin\x86
+
+-std=c++1z -pedantic-errors -fno-ms-compatibility -fexceptions -fsized-deallocation
+</pre>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+<hr><h3>Program Output</h3>
+<pre class="terminal"><span class="empty">Empty</span></pre>
+</body>
+</html>

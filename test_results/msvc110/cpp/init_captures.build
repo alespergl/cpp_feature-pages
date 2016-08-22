@@ -1,0 +1,8 @@
+init_captures.cpp
+init_captures.cpp(13) : error C3481: 'r': lambda capture variable not found
+init_captures.cpp(13) : error C2143: syntax error : missing ']' before '='
+init_captures.cpp(13) : error C2059: syntax error : ']'
+init_captures.cpp(13) : error C2059: syntax error : '='
+init_captures.cpp(14) : error C2143: syntax error : missing ';' before '{'
+init_captures.cpp(14) : error C2447: '{' : missing function header (old-style formal list?)
+init_captures.cpp(17) : error C2059: syntax error : ')'

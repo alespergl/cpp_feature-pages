@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/binary_literals</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+</code><code class="cpp">/*
+The binary literal syntax is supported.
+
+Reference:
+    [N3472](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)
+
+Check with:
+    #ifdef __cpp_binary_literals
+    #if __has_feature(cxx_binary_literals)
+*/
+
+int b = 0b101010;
+int B = 0B010101;
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.40219.01 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/EHsc /GR
+</pre>
+<pre class="terminal">binary_literals.cpp
+binary_literals.cpp(12) : error C2059: syntax error : &#39;bad suffix on number&#39;
+binary_literals.cpp(12) : error C2146: syntax error : missing &#39;;&#39; before identifier &#39;b101010&#39;
+binary_literals.cpp(12) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+binary_literals.cpp(13) : error C2059: syntax error : &#39;bad suffix on number&#39;
+binary_literals.cpp(13) : error C2146: syntax error : missing &#39;;&#39; before identifier &#39;B010101&#39;
+binary_literals.cpp(13) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+</pre>
+</body>
+</html>

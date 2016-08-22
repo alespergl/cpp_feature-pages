@@ -1,0 +1,3 @@
+static_assert-201411.cpp
+static_assert-201411.cpp(11) : error C2143: syntax error : missing ',' before ')'
+static_assert-201411.cpp(11) : error C2059: syntax error : ')'

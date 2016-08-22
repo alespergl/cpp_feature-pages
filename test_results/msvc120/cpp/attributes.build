@@ -1,0 +1,26 @@
+attributes.cpp
+attributes.cpp(12) : error C2332: 'struct' : missing tag name
+attributes.cpp(12) : error C2143: syntax error : missing ';' before '['
+attributes.cpp(12) : error C3409: empty attribute block is not allowed
+attributes.cpp(12) : error C2143: syntax error : missing ']' before '['
+attributes.cpp(12) : error C2337: 'attr' : attribute not found
+attributes.cpp(12) : error C2059: syntax error : ']'
+attributes.cpp(12) : error C2143: syntax error : missing ';' before '{'
+attributes.cpp(12) : error C2447: '{' : missing function header (old-style formal list?)
+attributes.cpp(12) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+attributes.cpp(14) : error C3409: empty attribute block is not allowed
+attributes.cpp(14) : error C2143: syntax error : missing ']' before '['
+attributes.cpp(14) : error C2337: 'noreturn' : attribute not found
+attributes.cpp(14) : error C2059: syntax error : ']'
+attributes.cpp(15) : error C2143: syntax error : missing ';' before '{'
+attributes.cpp(15) : error C2447: '{' : missing function header (old-style formal list?)
+attributes.cpp(28) : error C3409: empty attribute block is not allowed
+attributes.cpp(28) : error C2143: syntax error : missing ']' before '['
+attributes.cpp(28) : error C2337: 'fallthrough' : attribute not found
+attributes.cpp(28) : error C2143: syntax error : missing ';' before ']'
+attributes.cpp(34) : error C3409: empty attribute block is not allowed
+attributes.cpp(34) : error C2143: syntax error : missing ']' before '['
+attributes.cpp(34) : error C2337: 'maybe_unused' : attribute not found
+attributes.cpp(34) : error C2059: syntax error : ']'
+attributes.cpp(35) : error C2143: syntax error : missing ';' before '{'
+attributes.cpp(35) : error C2447: '{' : missing function header (old-style formal list?)
