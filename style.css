@@ -1,4 +1,21 @@
+html {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 body { font-family: Calibri, sans-serif }
+.libsection {
+    padding: 0 1em;
+    font-size: 10pt;
+}
+.libhosts {
+    border: 1px solid lightgray;
+    background-color: #EEEEE0;
+    float: left;
+    position: relative;
+    top: -6px;
+    margin-right: 1em;
+    padding: 5px;
+}
 table { border-spacing: 0 }
 tr:nth-child(even) { background-color: #ECF1EF; }
 td, th {

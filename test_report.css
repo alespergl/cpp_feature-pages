@@ -1,3 +1,7 @@
+html {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 body { font-family: Calibri, sans-serif }
 code, pre { font-family: Consolas, monospace; font-size: 10pt }
 h1 { font-size: 18pt; font-weight: bold; display: inline-block; margin: 0.4em 0.2em }
@@ -13,7 +17,7 @@ span.fail, span.pass {
 span.fail { background-color: red }
 span.pass { background-color: green }
 pre { border: 1px solid lightgray }
-pre.terminal { padding: 0.5em; background-color: black; color: white }
+pre.terminal { padding: 0.5em; background-color: black; color: white; overflow: auto }
 pre.terminal.info { background-color: white; color: gray; font-size: .7em }
 code { display: block; padding: 0.5em; overflow-x: auto }
 code.ln { float: left; color: gray; background-color: #FEF9ED }
