@@ -47,6 +47,8 @@
 35
 36
 37
+38
+39
 </code><code class="cpp">/*
 The decltype specifier is supported.
 
@@ -58,28 +60,30 @@ Check with:
     #if __has_feature(cxx_decltype)
 */
 
-#include &lt;type_traits&gt;
+template&lt;class T, class U, class X = void&gt; struct enable_if_same {};
+template&lt;class T, class X&gt; struct enable_if_same&lt;T, T, X&gt; { typedef X type; };
+
 
 const int&amp; foo();
 int i;
 struct S { double x; };
 const S* s = new S();
 
-std::enable_if&lt;std::is_same&lt;
+enable_if_same&lt;
     decltype(foo()), const int&amp;
-&gt;::value, int&gt;::type a;
+    , int&gt;::type a;
 
-std::enable_if&lt;std::is_same&lt;
+enable_if_same&lt;
     decltype(i), int
-&gt;::value, int&gt;::type b;
+    , int&gt;::type b;
 
-std::enable_if&lt;std::is_same&lt;
+enable_if_same&lt;
     decltype(s-&gt;x), double
-&gt;::value, int&gt;::type c;
+    , int&gt;::type c;
 
-std::enable_if&lt;std::is_same&lt;
+enable_if_same&lt;
     decltype((s-&gt;x)), const double&amp;
-&gt;::value, int&gt;::type d;
+    , int&gt;::type d;
 
 int main()
 {

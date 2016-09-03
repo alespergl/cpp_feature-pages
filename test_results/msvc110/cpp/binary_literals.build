@@ -1,7 +1,7 @@
 binary_literals.cpp
-binary_literals.cpp(12) : error C2059: syntax error : 'bad suffix on number'
-binary_literals.cpp(12) : error C2146: syntax error : missing ';' before identifier 'b101010'
-binary_literals.cpp(12) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-binary_literals.cpp(13) : error C2059: syntax error : 'bad suffix on number'
-binary_literals.cpp(13) : error C2146: syntax error : missing ';' before identifier 'B010101'
-binary_literals.cpp(13) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+binary_literals.cpp(14) : error C2059: syntax error : 'bad suffix on number'
+binary_literals.cpp(14) : error C2146: syntax error : missing ';' before identifier 'b101010'
+binary_literals.cpp(14) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+binary_literals.cpp(15) : error C2059: syntax error : 'bad suffix on number'
+binary_literals.cpp(15) : error C2146: syntax error : missing ';' before identifier 'B010101'
+binary_literals.cpp(15) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
