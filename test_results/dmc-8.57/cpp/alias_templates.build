@@ -1,0 +1,5 @@
+template<class T> using Y = X<T, int>;
+                                     ^
+alias_templates.cpp(13) : Error: undefined identifier 'Y'
+Internal error: template.c 2196
+--- errorlevel 1

@@ -1,0 +1,7 @@
+constexpr int square(int x)
+        ^
+constexpr.cpp(12) : Error: '=', ';' or ',' expected
+}
+^
+constexpr.cpp(15) : Error: identifier or '( declarator )' expected
+--- errorlevel 1

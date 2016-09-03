@@ -1,0 +1,10 @@
+constexpr int abs(int x)
+        ^
+constexpr-201304.cpp(12) : Error: '=', ';' or ',' expected
+    return x;
+         ^
+constexpr-201304.cpp(15) : Error: '=', ';' or ',' expected
+}
+^
+constexpr-201304.cpp(16) : Error: identifier or '( declarator )' expected
+--- errorlevel 1

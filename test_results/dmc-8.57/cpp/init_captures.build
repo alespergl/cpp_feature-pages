@@ -1,0 +1,10 @@
+auto y = [&r = x, x = x + 1]() -> int
+     ^
+init_captures.cpp(13) : Error:  storage class is illegal in this context
+    return x + 2;
+         ^
+init_captures.cpp(16) : Error: '=', ';' or ',' expected
+}();
+^
+init_captures.cpp(17) : Error: identifier or '( declarator )' expected
+--- errorlevel 1

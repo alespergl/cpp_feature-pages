@@ -1,0 +1,17 @@
+    auto l1 = [&] {};       // by-reference capture default
+              ^
+lambdas-200907.cpp(21) : Error: expression expected
+    auto l2 = [=] {};       // by-copy capture default
+              ^
+lambdas-200907.cpp(22) : Error: expression expected
+    auto l3 = [&, i] {};    // by-reference capture, except i is captured by copy
+              ^
+lambdas-200907.cpp(23) : Error: expression expected
+    auto l4 = [=, &i] {};   // by-copy capture, except i is captured by reference
+              ^
+lambdas-200907.cpp(24) : Error: expression expected
+    [=] {                   // x and r are not captured (appearance in a decltype operand is not a "use")
+     ^
+lambdas-200907.cpp(28) : Error: expression expected
+Fatal error: too many errors
+--- errorlevel 1

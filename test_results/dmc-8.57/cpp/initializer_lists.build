@@ -1,0 +1,17 @@
+int n0 {};                              // value-initialization (to zero)
+       ^
+initializer_lists.cpp(14) : Error: '=', ';' or ',' expected
+int n1 {1};                             // direct-list-initialization
+       ^
+initializer_lists.cpp(15) : Error: '=', ';' or ',' expected
+std::string s1 {'a', 'b', 'c', 'd'};    // initializer-list constructor call
+               ^
+initializer_lists.cpp(16) : Error: '=', ';' or ',' expected
+std::string s2 {s1, 2, 2};              // regular constructor call
+               ^
+initializer_lists.cpp(17) : Error: '=', ';' or ',' expected
+std::string s3 {0x61, 'a'};             // initializer-list ctor is preferred to (int, char)
+               ^
+initializer_lists.cpp(18) : Error: '=', ';' or ',' expected
+Fatal error: too many errors
+--- errorlevel 1

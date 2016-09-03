@@ -1,0 +1,13 @@
+template<typename... T>
+                   ^
+fold_expressions.cpp(11) : Error: '>' expected
+fold_expressions.cpp(12) : Error: ')' expected to close function parameter list with
+bool b1 = f(1, 2, 3);
+                    ^
+fold_expressions.cpp(17) : Error: no match for function 'f(int ,int ,int )'
+template<typename... T>
+                   ^
+fold_expressions.cpp(19) : Error: '>' expected
+fold_expressions.cpp(20) : Error: parameter list is out of context
+Fatal error: too many errors
+--- errorlevel 1

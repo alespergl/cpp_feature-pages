@@ -1,0 +1,17 @@
+struct [[attr]] S {} s;
+        ^
+attributes.cpp(12) : Error: expression expected
+[[noreturn]] void f()
+ ^
+attributes.cpp(14) : Error: expression expected
+}
+^
+attributes.cpp(17) : Error: identifier or '( declarator )' expected
+        [[fallthrough]];
+         ^
+attributes.cpp(28) : Error: expression expected
+[[maybe_unused]] void h([[maybe_unused]] int i)
+ ^
+attributes.cpp(34) : Error: expression expected
+Fatal error: too many errors
+--- errorlevel 1

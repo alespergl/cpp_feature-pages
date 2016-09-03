@@ -1,0 +1,11 @@
+void f() noexcept;
+                ^
+noexcept.cpp(11) : Error: '=', ';' or ',' expected
+void g() noexcept(false);
+                ^
+noexcept.cpp(12) : Error: 'g' is not in function parameter list
+{
+^
+noexcept.cpp(15) : Error: 'main' is not in function parameter list
+Fatal error: premature end of source file
+--- errorlevel 1

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/auto_type</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</code><code class="cpp">/*
+The auto type specifier is supported.
+
+Check with:
+    #if __has_feature(cxx_auto_type)
+*/
+
+struct S {};
+
+S g() { return S(); }
+
+auto i = 42;
+auto f = 1.0;
+auto s = g();
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Digital Mars Compiler Version 8.42n
+Copyright (C) Digital Mars 2000-2004.  All Rights Reserved.
+Written by Walter Bright  www.digitalmars.com/ctg/sc.html
+DMC is a one-step program to compile and link C++, C and ASM files.
+
+-Ae -Ar
+</pre>
+<pre class="terminal">auto i = 42;
+     ^
+auto_type.cpp(12) : Error:  storage class is illegal in this context
+auto f = 1.0;
+     ^
+auto_type.cpp(13) : Error:  storage class is illegal in this context
+auto s = g();
+     ^
+auto_type.cpp(14) : Error:  storage class is illegal in this context
+--- errorlevel 1
+</pre>
+</body>
+</html>

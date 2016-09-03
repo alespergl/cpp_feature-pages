@@ -1,0 +1,17 @@
+void operator delete(void* ptr, std::size_t sz) noexcept
+                                                       ^
+sized_deallocation.cpp(17) : Error: '=', ';' or ',' expected
+    ::operator delete(ptr);
+             ^
+sized_deallocation.cpp(20) : Error: identifier expected
+}
+^
+sized_deallocation.cpp(21) : Error: '=', ';' or ',' expected
+    ::operator delete(ptr);
+             ^
+sized_deallocation.cpp(26) : Error: identifier expected
+}
+^
+sized_deallocation.cpp(27) : Error: '=', ';' or ',' expected
+Fatal error: too many errors
+--- errorlevel 1

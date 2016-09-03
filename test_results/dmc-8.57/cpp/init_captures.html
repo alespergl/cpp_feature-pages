@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/init_captures</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</code><code class="cpp">/*
+The init-capture syntax is supported in lambda expressions.
+
+Reference:
+    [N3648](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3648.html)
+
+Check with:
+    #ifdef __cpp_init_captures
+    #if __has_feature(cxx_init_captures)
+*/
+
+int x = 4;
+auto y = [&amp;r = x, x = x + 1]() -&gt; int
+{
+    r += 2;
+    return x + 2;
+}();
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Digital Mars Compiler Version 8.42n
+Copyright (C) Digital Mars 2000-2004.  All Rights Reserved.
+Written by Walter Bright  www.digitalmars.com/ctg/sc.html
+DMC is a one-step program to compile and link C++, C and ASM files.
+
+-Ae -Ar
+</pre>
+<pre class="terminal">auto y = [&amp;r = x, x = x + 1]() -&gt; int
+     ^
+init_captures.cpp(13) : Error:  storage class is illegal in this context
+    return x + 2;
+         ^
+init_captures.cpp(16) : Error: &#39;=&#39;, &#39;;&#39; or &#39;,&#39; expected
+}();
+^
+init_captures.cpp(17) : Error: identifier or &#39;( declarator )&#39; expected
+--- errorlevel 1
+</pre>
+</body>
+</html>

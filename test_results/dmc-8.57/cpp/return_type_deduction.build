@@ -1,0 +1,15 @@
+auto f();               // return type is unknown
+     ^
+return_type_deduction.cpp(12) : Error:  storage class is illegal in this context
+auto f() { return 42; } // return type is int
+     ^
+return_type_deduction.cpp(13) : Error:  storage class is illegal in this context
+auto f();               // redeclaration
+     ^
+return_type_deduction.cpp(14) : Error:  storage class is illegal in this context
+template<class T> auto g(T t);              // forward declaration
+                             ^
+return_type_deduction.cpp(16) : Error:  storage class is illegal in this context
+return_type_deduction.cpp(17) : Error:  storage class is illegal in this context
+Fatal error: too many errors
+--- errorlevel 1

@@ -1,0 +1,4 @@
+    int a = 7;
+          ^
+nsdmi.cpp(14) : Error: ';' expected following declaration of struct member
+--- errorlevel 1

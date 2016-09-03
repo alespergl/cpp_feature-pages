@@ -1,0 +1,6 @@
+Digital Mars Compiler Version 8.42n
+Copyright (C) Digital Mars 2000-2004.  All Rights Reserved.
+Written by Walter Bright  www.digitalmars.com/ctg/sc.html
+DMC is a one-step program to compile and link C++, C and ASM files.
+
+-Ae -Ar

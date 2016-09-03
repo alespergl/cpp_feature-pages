@@ -1,0 +1,15 @@
+template<class ... Types>
+                 ^
+variadic_templates.cpp(12) : Error: '>' expected
+variadic_templates.cpp(13) : Error: ')' expected to close function parameter list with
+    f();
+       ^
+variadic_templates.cpp(19) : Error: no match for function 'f()'
+    f(1);
+        ^
+variadic_templates.cpp(20) : Error: no match for function 'f(int )'
+    f(2, 1.0);
+             ^
+variadic_templates.cpp(21) : Error: no match for function 'f(int ,double )'
+Fatal error: too many errors
+--- errorlevel 1

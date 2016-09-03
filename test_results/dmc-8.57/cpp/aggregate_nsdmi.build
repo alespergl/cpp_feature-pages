@@ -1,0 +1,4 @@
+    int d = b[a];   // this should compile without errors
+          ^
+aggregate_nsdmi.cpp(19) : Error: ';' expected following declaration of struct member
+--- errorlevel 1

@@ -1,0 +1,5 @@
+namespace [[attr]]
+          ^
+namespace_attributes.cpp(11) : Error: identifier expected
+Fatal error: premature end of source file
+--- errorlevel 1

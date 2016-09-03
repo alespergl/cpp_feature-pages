@@ -1,0 +1,6 @@
+    void f() & {}
+             ^
+ref_qualifiers.cpp(14) : Error: function body or member initializer expected following declaration of 'X::f'
+ref_qualifiers.cpp(22) : Error: ';' expected following declaration of struct member
+Fatal error: premature end of source file
+--- errorlevel 1

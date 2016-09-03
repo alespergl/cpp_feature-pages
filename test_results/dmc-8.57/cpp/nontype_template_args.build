@@ -1,0 +1,4 @@
+X<&s.s> x1;  // address of static member
+      ^
+nontype_template_args.cpp(13) : Error: 's' cannot have address of array element or nonstatic class member as template-argument
+--- errorlevel 1

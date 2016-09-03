@@ -1,0 +1,10 @@
+struct alignas(16) sse_t
+                ^
+alignas.cpp(11) : Error: closing ')' of '( declarator )' expected
+};
+^
+alignas.cpp(14) : Error: identifier or '( declarator )' expected
+alignas(128) char cacheline[128];
+          ^
+alignas.cpp(16) : Error: closing ')' of '( declarator )' expected
+--- errorlevel 1

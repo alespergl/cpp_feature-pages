@@ -1,0 +1,17 @@
+    alignof(char),
+          ^
+alignof.cpp(23) : Error: expression expected
+    alignof(int*),
+          ^
+alignof.cpp(24) : Error: expression expected
+    alignof(S),
+          ^
+alignof.cpp(25) : Error: expression expected
+    alignof(Empty)
+          ^
+alignof.cpp(26) : Error: expression expected
+};
+^
+alignof.cpp(27) : Error: ')' expected
+Fatal error: too many errors
+--- errorlevel 1

@@ -1,0 +1,4 @@
+enum [[attr]]
+     ^
+enumerator_attributes.cpp(11) : Error: '{' or tag identifier expected
+--- errorlevel 1

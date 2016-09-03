@@ -1,0 +1,21 @@
+double&& rd = (double)i;    // reference bound to temporary double
+       ^
+rvalue_references.cpp(13) : Error: '=', ';' or ',' expected
+void f(int&& x) {}
+           ^
+rvalue_references.cpp(17) : Error: ')' expected
+    f(i);  // calls f(int&)
+        ^
+rvalue_references.cpp(23) : Error: ambiguous reference to symbol
+Had: f(int &)
+and: f(int ,...)
+    f(ci); // calls f(const int&)
+         ^
+rvalue_references.cpp(24) : Error: ambiguous reference to symbol
+Had: f(int const &)
+and: f(int ,...)
+    f(3);  // calls f(int&&)
+        ^
+rvalue_references.cpp(25) : Error: ambiguous reference to symbol
+Fatal error: too many errors
+--- errorlevel 1

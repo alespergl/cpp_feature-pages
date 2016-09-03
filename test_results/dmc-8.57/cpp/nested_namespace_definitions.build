@@ -1,0 +1,13 @@
+namespace A::B
+            ^
+nested_namespace_definitions.cpp(11) : Error: '{' expected
+    }
+    ^
+nested_namespace_definitions.cpp(16) : Error: identifier or '( declarator )' expected
+}
+^
+nested_namespace_definitions.cpp(17) : Error: identifier or '( declarator )' expected
+int i = A::B::f();
+          ^
+nested_namespace_definitions.cpp(19) : Error: undefined identifier 'A', did you mean 'i'?
+--- errorlevel 1

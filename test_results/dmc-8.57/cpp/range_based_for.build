@@ -1,0 +1,16 @@
+    for(int i : a) as += i;
+              ^
+range_based_for.cpp(18) : Error: '=', ';' or ',' expected
+    std::vector<int> v(10);
+                          ^
+range_based_for.cpp(20) : Error: undefined use of struct or union
+    int vs = 0;
+         ^
+range_based_for.cpp(21) : Error: '(' expected following simple type name
+    for(int i : v) vs += i;
+      ^
+range_based_for.cpp(22) : Error: ')' expected
+    for(int i : v) vs += i;
+                 ^
+range_based_for.cpp(22) : Warning 6: value of expression is not used
+--- errorlevel 1

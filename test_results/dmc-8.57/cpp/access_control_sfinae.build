@@ -1,0 +1,7 @@
+    if(sizeof(f<X>()) != sizeof(int))
+                    ^
+access_control_sfinae.cpp(33) : Error: ambiguous reference to symbol
+Had: f()
+and: f(...)
+Internal error: type.c 159
+--- errorlevel 1

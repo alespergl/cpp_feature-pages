@@ -1,0 +1,2 @@
+delegating_constructors.cpp(17) : Error: 'X' is not a member of 'X'
+--- errorlevel 1

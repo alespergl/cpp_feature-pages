@@ -1,0 +1,19 @@
+auto identity = [](auto a) { return a; };
+            ^
+generic_lambdas.cpp(12) : Error:  storage class is illegal in this context
+int three = identity(3);
+                      ^
+generic_lambdas.cpp(14) : Error: function expected
+const char* hello = identity("hello");
+                                    ^
+generic_lambdas.cpp(15) : Error: function expected
+int (*fpi)(int) = identity;
+                          ^
+generic_lambdas.cpp(18) : Error: need explicit cast to convert
+from: int 
+to  : int (*C func)(int )
+char (*fpc)(char) = identity;
+                            ^
+generic_lambdas.cpp(19) : Error: need explicit cast to convert
+Fatal error: too many errors
+--- errorlevel 1

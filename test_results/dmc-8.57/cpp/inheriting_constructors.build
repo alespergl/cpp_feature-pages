@@ -1,0 +1,7 @@
+    using B::B;
+             ^
+inheriting_constructors.cpp(19) : Error: undefined identifier 'B'
+D d(1);
+      ^
+inheriting_constructors.cpp(23) : Error: cannot find constructor for class matching D::D(int )
+--- errorlevel 1

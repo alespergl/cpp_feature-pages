@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/constexpr</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</code><code class="cpp">/*
+Constant expressions are supported.
+
+Reference:
+    [N2235](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2235.pdf)
+
+Check with:
+    #ifdef __cpp_constexpr
+    #if __has_feature(cxx_constexpr)
+*/
+
+constexpr int square(int x)
+{
+    return x * x;
+}
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Digital Mars Compiler Version 8.42n
+Copyright (C) Digital Mars 2000-2004.  All Rights Reserved.
+Written by Walter Bright  www.digitalmars.com/ctg/sc.html
+DMC is a one-step program to compile and link C++, C and ASM files.
+
+-Ae -Ar
+</pre>
+<pre class="terminal">constexpr int square(int x)
+        ^
+constexpr.cpp(12) : Error: &#39;=&#39;, &#39;;&#39; or &#39;,&#39; expected
+}
+^
+constexpr.cpp(15) : Error: identifier or &#39;( declarator )&#39; expected
+--- errorlevel 1
+</pre>
+</body>
+</html>

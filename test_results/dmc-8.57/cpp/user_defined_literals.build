@@ -1,0 +1,17 @@
+unsigned operator "" _w(const char*) { return 0; }
+                   ^
+user_defined_literals.cpp(14) : Error: not an overloadable operator token
+long double operator "" _w(long double) { return 0; }
+                      ^
+user_defined_literals.cpp(15) : Error: not an overloadable operator token
+const char* operator "" _w(const char*, std::size_t) { return ""; }
+                      ^
+user_defined_literals.cpp(16) : Error: not an overloadable operator token
+    12_w;       // calls operator "" _w("12")
+       ^
+user_defined_literals.cpp(20) : Error: ';' expected following declaration of struct member
+    1.2_w;      // calls operator "" _w(1.2L)
+        ^
+user_defined_literals.cpp(21) : Error: ';' expected following declaration of struct member
+Fatal error: too many errors
+--- errorlevel 1

@@ -1,0 +1,5 @@
+T pi = T(3.1415926535897932385);
+                               ^
+variable_templates.cpp(13) : Error: function expected
+Internal error: template.c 2196
+--- errorlevel 1

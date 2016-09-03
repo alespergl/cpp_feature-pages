@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/generic_lambdas</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</code><code class="cpp">/*
+Generic (polymorphic) lambda expressions are supported.
+
+Reference:
+    [N3649](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3649.html)
+
+Check with:
+    #ifdef __cpp_generic_lambdas
+    #if __has_feature(cxx_generic_lambdas)
+*/
+
+auto identity = [](auto a) { return a; };
+
+int three = identity(3);
+const char* hello = identity(&quot;hello&quot;);
+
+// Conversion to function pointer for capture-less lambdas
+int (*fpi)(int) = identity;
+char (*fpc)(char) = identity;
+
+int main()
+{
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Digital Mars Compiler Version 8.42n
+Copyright (C) Digital Mars 2000-2004.  All Rights Reserved.
+Written by Walter Bright  www.digitalmars.com/ctg/sc.html
+DMC is a one-step program to compile and link C++, C and ASM files.
+
+-Ae -Ar
+</pre>
+<pre class="terminal">auto identity = [](auto a) { return a; };
+            ^
+generic_lambdas.cpp(12) : Error:  storage class is illegal in this context
+int three = identity(3);
+                      ^
+generic_lambdas.cpp(14) : Error: function expected
+const char* hello = identity(&quot;hello&quot;);
+                                    ^
+generic_lambdas.cpp(15) : Error: function expected
+int (*fpi)(int) = identity;
+                          ^
+generic_lambdas.cpp(18) : Error: need explicit cast to convert
+from: int 
+to  : int (*C func)(int )
+char (*fpc)(char) = identity;
+                            ^
+generic_lambdas.cpp(19) : Error: need explicit cast to convert
+Fatal error: too many errors
+--- errorlevel 1
+</pre>
+</body>
+</html>

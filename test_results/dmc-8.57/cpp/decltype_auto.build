@@ -1,0 +1,10 @@
+int&& f() { return static_cast<int&&>(i); }
+    ^
+decltype_auto.cpp(13) : Error: '=', ';' or ',' expected
+decltype(auto) n = i;
+            ^
+decltype_auto.cpp(14) : Error: expression expected
+decltype(auto) m = f();
+            ^
+decltype_auto.cpp(15) : Error: expression expected
+--- errorlevel 1

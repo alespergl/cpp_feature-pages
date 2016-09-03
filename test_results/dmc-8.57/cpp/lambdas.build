@@ -1,0 +1,13 @@
+    auto l1 = [&] {};       // by-reference capture default
+              ^
+lambdas.cpp(16) : Error: expression expected
+    auto l2 = [=] {};       // by-copy capture default
+              ^
+lambdas.cpp(17) : Error: expression expected
+    auto l3 = [&, i] {};    // by-reference capture, except i is captured by copy
+              ^
+lambdas.cpp(18) : Error: expression expected
+    auto l4 = [=, &i] {};   // by-copy capture, except i is captured by reference
+              ^
+lambdas.cpp(19) : Error: expression expected
+--- errorlevel 1

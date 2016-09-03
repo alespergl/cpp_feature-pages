@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../../test_report.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.5.0/styles/vs.min.css">
+<script src="https://cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<span class="fail">fail</span>
+<h1>cpp/aggregate_nsdmi</h1>
+<hr><h3>Source Code</h3>
+<pre><code class="hljs nohighlight ln"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</code><code class="cpp">/*
+Aggregates may include member initializers.
+
+Reference:
+    [N3653](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)
+
+Check with:
+    #ifdef __cpp_aggregate_nsdmi
+    #if __has_feature(cxx_aggregate_nsdmi)
+*/
+
+#include &lt;cstdio&gt;
+
+struct S
+{
+    int a;
+    const char* b;
+    int c;
+    int d = b[a];   // this should compile without errors
+};
+
+S ss = { 1, &quot;asdf&quot; };   // ss.d == &#39;s&#39;
+
+int main()
+{
+    if(ss.d != &#39;s&#39;) puts(&quot;ERROR: aggregate member initialization with equal-initializer doesn&#39;t work&quot;);
+}
+</code></pre>
+<hr><h3>Build Output</h3>
+<pre class="terminal info">Digital Mars Compiler Version 8.42n
+Copyright (C) Digital Mars 2000-2004.  All Rights Reserved.
+Written by Walter Bright  www.digitalmars.com/ctg/sc.html
+DMC is a one-step program to compile and link C++, C and ASM files.
+
+-Ae -Ar
+</pre>
+<pre class="terminal">    int d = b[a];   // this should compile without errors
+          ^
+aggregate_nsdmi.cpp(19) : Error: &#39;;&#39; expected following declaration of struct member
+--- errorlevel 1
+</pre>
+</body>
+</html>

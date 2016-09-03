@@ -1,0 +1,10 @@
+auto i = 42;
+     ^
+auto_type.cpp(12) : Error:  storage class is illegal in this context
+auto f = 1.0;
+     ^
+auto_type.cpp(13) : Error:  storage class is illegal in this context
+auto s = g();
+     ^
+auto_type.cpp(14) : Error:  storage class is illegal in this context
+--- errorlevel 1
