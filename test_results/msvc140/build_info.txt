@@ -1,4 +1,4 @@
-Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24213.1 for x86
+Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x86
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-/EHsc /GR /std:c++latest
+/EHsc /GR /W3 /std:c++latest

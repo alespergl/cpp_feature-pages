@@ -1,1 +1,2 @@
 namespace_attributes.cpp
+namespace_attributes.cpp(11): warning C5030: attribute 'attr' is not recognized

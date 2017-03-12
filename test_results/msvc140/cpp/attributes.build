@@ -1,1 +1,4 @@
 attributes.cpp
+attributes.cpp(12): warning C5030: attribute 'attr' is not recognized
+attributes.cpp(28): warning C5030: attribute 'fallthrough' is not recognized
+attributes.cpp(34): warning C5030: attribute 'maybe_unused' is not recognized
