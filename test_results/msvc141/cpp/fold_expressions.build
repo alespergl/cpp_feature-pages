@@ -1,0 +1,5 @@
+fold_expressions.cpp
+fold_expressions.cpp(14): error C2059: syntax error: '...'
+fold_expressions.cpp(17): note: see reference to function template instantiation 'bool f<int,int,int>(int,int,int)' being compiled
+fold_expressions.cpp(22): error C2059: syntax error: '...'
+fold_expressions.cpp(25): note: see reference to function template instantiation 'bool all<int,int,int>(int,int,int)' being compiled
